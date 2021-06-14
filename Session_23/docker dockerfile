@@ -1,0 +1,28 @@
+## vim Dockerfile
+ 
+  ENTRYPOINT  ---->  Similar to CMD Keyword but provides some extra features when used with CMD Keyword
+  
+  CMD  ---->  With ENTRYPOINT Keyword it is used to pass the options on terminal or can also be set as default
+  
+  
+## How to give the input in non-interative way so that jenkins like tools could also be integrated ?
+    
+      Write Code in python file(a.py): 
+      
+                                  import sys
+                                  a = sys.argv()
+                                  print("you name is: " a[1])
+                                  
+                                  vim Docekrfile
+                                    COPY          a.py  /
+                                   
+                                    ENTRYPOINT    [ "python3", "/a.py" ]
+                                  
+                                    CMD           [ "usrname" ]
+                                    
+                                  docker build -t <image>:<tag> <location_of_dockerfile>
+                                  
+                                  docker run -it <image>:<tag> vimal
+                                  
+                                  
+NOTE:  The option passed(vimal) in terminal with command would override the option written in CMD Keyword(usrname).
