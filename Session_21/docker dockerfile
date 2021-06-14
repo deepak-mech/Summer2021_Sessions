@@ -1,0 +1,18 @@
+## vim Dockerfile
+
+  FROM  ----->  To mention which base OS you are going to use
+  
+  RUN   ----->  To run any command during build time(i.e. while creating image)
+  
+  CMD   ----->  To run any command during run time(i.e. after launching of container)
+  
+  COPY  ----->  To copy any file from docker host to image
+  
+  
+ ## docker build -t <image_name>:<tag> <location/path>   ----->  TO build the image
+ 
+ ## docker run -it <image_name>:<tag>  ----->  To launch the container
+ 
+ ## docker ps  ----->  To check the status of running containers
+ 
+ ## yum whatprovides <cmd_name>  ----->  To check the software name of that particular command
